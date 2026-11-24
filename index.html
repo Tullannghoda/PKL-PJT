@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Jadi kan.....</title>
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating Hearts Background -->
+  <div class="hearts-bg" id="heartsBg"></div>
+
+  <!-- Music Toggle (Opsional) -->
+  <div class="music-toggle" id="musicToggle" title="Putar Musik">
+    <span class="music-icon">🎵</span>
+    <audio id="bgMusic" loop preload="auto">
+      <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <main class="container">
+    <div class="card-wrapper">
+      
+      <!-- CARD 1 -->
+      <div class="card active" id="card-1">
+        <span class="card-step-badge">1 / 11</span>
+        <div class="card-body">
+          <p class="story-text">Aku gatau kapan tepatnya, tapi berinteraksi sama km rasanya beda aja, selalu buat aku senyum senyum terus.</p>
+        </div>
+        <button class="btn btn-primary" onclick="nextCard(2)">
+          Lanjut ➜
+        </button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card" id="card-2">
+        <span class="card-step-badge">2 / 11</span>
+        <div class="card-body">
+          <p class="story-text">Aku bukan orang yang pekaan tapi aku sadar km itu orang yang istimewa buat aku.</p>
+        </div>
+        <button class="btn btn-primary" onclick="nextCard(3)">
+          Lanjut ➜
+        </button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card" id="card-3">
+        <span class="card-step-badge">3 / 11</span>
+        <div class="card-body">
+          <p class="story-text">Km wanita yang lucu, sabar, peduli, kuat, walau kadang suka badmood tapi bisa juga switch secepat cahaya. hehe</p>
+        </div>
+        <button class="btn btn-primary" onclick="nextCard(4)">
+          Lanjut ➜
+        </button>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card" id="card-4">
+        <span class="card-step-badge">4 / 11</span>
+        <div class="card-body">
+          <p class="story-text">Jujur aku gapandai nyusun kata-kata maniez, tapi aku nyoba sebisa mungkin.</p>
+        </div>
+        <button class="btn btn-primary" onclick="nextCard(5)">
+          Lanjut ➜
+        </button>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="card" id="card-5">
+        <span class="card-step-badge">5 / 11</span>
+        <div class="card-body">
+          <p class="story-text">Sebetulnya aku gapengen buru-buru banget, tapi aku juga gamau bohong ama diriku sendiri kalo aku ga ngerasa apa-apa. Karena tiap hari aku makin suka interaksi sama kamu.</p>
+        </div>
+        <button class="btn btn-primary" onclick="nextCard(6)">
+          Lanjut ➜
+        </button>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="card" id="card-6">
+        <span class="card-step-badge">6 / 11</span>
+        <div class="card-body">
+          <p class="story-text">Senang dengar km cerita, senang lihat kamu bahagia, senang dengar km misuh-misuh, pokoknya makin senang.</p>
+        </div>
+        <button class="btn btn-primary" onclick="nextCard(7)">
+          Lanjut ➜
+        </button>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="card" id="card-7">
+        <span class="card-step-badge">7 / 11</span>
+        <div class="card-body">
+          <p class="story-text">Aku ga ada barang yang bisa ku kasih untuk saat ini, cuman isi hatiku yang pengen jujur aja.</p>
+        </div>
+        <button class="btn btn-primary" onclick="nextCard(8)">
+          Lanjut ➜
+        </button>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="card" id="card-8">
+        <span class="card-step-badge">8 / 11</span>
+        <div class="card-body">
+          <p class="story-text bold-text">Jadi aku mau jujur, aku suka kamu &lt;3</p>
+        </div>
+        <button class="btn btn-primary" onclick="nextCard(9)">
+          Lanjut ➜
+        </button>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="card" id="card-9">
+        <span class="card-step-badge">9 / 11</span>
+        <div class="card-body">
+          <p class="story-text">Aku suka kamu dan semua anugrah Tuhan yang diberikan untukmu. Kalau kamu ga keberatan, aku pengen dekat terus ama kamu.</p>
+        </div>
+        <button class="btn btn-primary" onclick="nextCard(10)">
+          Lanjut ➜
+        </button>
+      </div>
+
+      <!-- CARD 10 -->
+      <div class="card" id="card-10">
+        <span class="card-step-badge">10 / 11</span>
+        <div class="card-body">
+          <p class="story-text">Sebenarnya aku seminggu ini kebanyakan mikir, karena kamu sempat bilang kalo pdkt-an sama kamu itu ga cukup sebulan. Jadi aku hari ini mau confess &lt;3</p>
+        </div>
+        <button class="btn btn-primary" onclick="nextCard(11)">
+          Lanjut ➜
+        </button>
+      </div>
+
+      <!-- CARD 11 (CHECKPOINT) -->
+      <div class="card" id="card-11">
+        <span class="card-step-badge">11 / 11</span>
+        <div class="card-body">
+          <p class="story-text">Atau kalau kamu ada keyakinan untuk ngelanjut gapapa kok</p>
+        </div>
+        <div class="checkpoint-actions">
+          <button class="btn btn-primary" onclick="nextCard(12)">
+            Lanjut
+          </button>
+          <button class="btn btn-outline" id="checkpointNoBtn" onclick="teaseCheckpointNo()">
+            Engga
+          </button>
+        </div>
+        <p class="checkpoint-hint" id="checkpointHint"></p>
+      </div>
+
+      <!-- CARD 12 (THE CONFESSION: YES / NO) -->
+      <div class="card" id="card-12">
+        <div class="card-body">
+          <p class="confession-text">
+            Aku pengen jagain kamu bukan cuma hari ini tapi seterusnya. Jadi kamu mau ga…… Jadi pacarku?
+          </p>
+        </div>
+
+        <div class="confession-buttons-zone" id="confessionButtonsZone">
+          <button class="btn btn-yes" id="yesBtn" onclick="acceptConfession()">
+            Yes
+          </button>
+          <button class="btn btn-no" id="noBtn" onclick="onNoButtonClick(event)">
+            No
+          </button>
+        </div>
+
+        <p class="dodge-counter-text" id="dodgeCounterText"></p>
+      </div>
+
+      <!-- CARD 13 (CELEBRATION) -->
+      <div class="card" id="card-13">
+        <h2 class="card-title title-highlight">YAAAY! ❤️</h2>
+        <div class="card-body">
+          <p class="story-text">Makasih banyak ya udah mau nerima aku! Janji bakal selalu ada dan jagain kamu terus.</p>
+          <p class="sweet-note">Sekarang kabarin aku di WhatsApp ya!</p>
+        </div>
+        <a id="waButton" href="https://wa.me/?text=Halo!%20Aku%20udah%20buka%20webnya...%20dan%20jawabannya%20YES!%20%E2%9D%A4%EF%B8%8F" target="_blank" class="btn btn-whatsapp">
+          Kabari Aku di WhatsApp!
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
